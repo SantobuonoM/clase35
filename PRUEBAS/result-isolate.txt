@@ -1,0 +1,731 @@
+Statistical profiling result from isolate-artillery.log, (1844 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    601   32.6%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+    155    8.4%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      2    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.3%    0.6%  LazyCompile: *resolve path.js:973:10
+      5    0.3%    0.5%  LazyCompile: *normalizeString path.js:52:25
+      1    0.1%    0.1%  RegExp: [ ,]+
+      1    0.1%    0.1%  LazyCompile: *syncExports internal/bootstrap/loaders.js:252:14
+      1    0.1%    0.1%  LazyCompile: *hidden internal/errors.js:282:25
+      1    0.1%    0.1%  LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      1    0.1%    0.1%  LazyCompile: *C internal/deps/cjs-module-lexer/dist/lexer.js:1:1152
+      1    0.1%    0.1%  Function: *wasm-function[19]
+
+ [C++]:
+   ticks  total  nonlib   name
+    319   17.3%   29.4%  node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    315   17.1%   29.0%  node::inspector::(anonymous namespace)::WaitForDebugger(v8::FunctionCallbackInfo<v8::Value> const&)
+    106    5.7%    9.8%  epoll_pwait@@GLIBC_2.6
+     67    3.6%    6.2%  __write@@GLIBC_2.2.5
+     48    2.6%    4.4%  node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     24    1.3%    2.2%  node::crypto::PBKDF2(v8::FunctionCallbackInfo<v8::Value> const&)
+     13    0.7%    1.2%  fwrite@@GLIBC_2.2.5
+     11    0.6%    1.0%  node::crypto::SSLWrap<node::TLSWrap>::GetPeerCertificate(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    0.5%    0.9%  syscall@@GLIBC_2.2.5
+     10    0.5%    0.9%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     10    0.5%    0.9%  node::crypto::SecureContext::AddRootCerts(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    0.5%    0.9%  __libc_malloc@@GLIBC_2.2.5
+      8    0.4%    0.7%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.4%    0.6%  node::TLSWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.4%    0.6%  __mprotect@@GLIBC_PRIVATE
+      6    0.3%    0.6%  node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.3%    0.5%  cfree@GLIBC_2.2.5
+      4    0.2%    0.4%  pthread_cond_signal@@GLIBC_2.3.2
+      4    0.2%    0.4%  operator new(unsigned long)@@GLIBCXX_3.4
+      4    0.2%    0.4%  node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.4%  node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.4%  node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.4%  node::SyncProcessRunner::Spawn(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.2%    0.3%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+      3    0.2%    0.3%  v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      3    0.2%    0.3%  node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.2%    0.3%  node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.2%  void node::StreamBase::JSMethod<&node::StreamBase::WriteBuffer>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.2%  v8::internal::VariableMap::Declare(v8::internal::Zone*, v8::internal::Scope*, v8::internal::AstRawString const*, v8::internal::VariableMode, v8::internal::VariableKind, v8::internal::InitializationFlag, v8::internal::MaybeAssignedFlag, bool*)
+      2    0.1%    0.2%  v8::internal::Accessors::FunctionPrototypeSetter(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Boolean> const&)
+      2    0.1%    0.2%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      2    0.1%    0.2%  node::url::(anonymous namespace)::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.2%  node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.2%  node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.2%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      2    0.1%    0.2%  node::(anonymous namespace)::ProcessWrap::Spawn(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  v8::internal::VariableProxy::BindTo(v8::internal::Variable*)
+      1    0.1%    0.1%  v8::internal::UnoptimizedCompilationJob::RecordCompilationStats(v8::internal::Isolate*) const
+      1    0.1%    0.1%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+      1    0.1%    0.1%  v8::internal::Scope::Scope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType)
+      1    0.1%    0.1%  v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      1    0.1%    0.1%  v8::internal::Scope::DeserializeScopeChain(v8::internal::Isolate*, v8::internal::Zone*, v8::internal::ScopeInfo, v8::internal::DeclarationScope*, v8::internal::AstValueFactory*, v8::internal::Scope::DeserializationMode)
+      1    0.1%    0.1%  v8::internal::ExternalReferenceTable::Init(v8::internal::Isolate*)
+      1    0.1%    0.1%  v8::internal::Expression::IsConciseMethodDefinition() const
+      1    0.1%    0.1%  v8::internal::DeclarationScope::DeclarationScope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType, v8::internal::FunctionKind)
+      1    0.1%    0.1%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.1%    0.1%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    0.1%    0.1%  v8::internal::AstRawString::Compare(void*, void*)
+      1    0.1%    0.1%  v8::internal::AssemblerBase::~AssemblerBase()
+      1    0.1%    0.1%  v8::internal::Accessors::ReconfigureToDataProperty(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Boolean> const&)
+      1    0.1%    0.1%  v8::internal::Accessors::ErrorStackGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.1%    0.1%  std::ostream::flush()@@GLIBCXX_3.4
+      1    0.1%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.1%    0.1%  std::locale::id::_M_id() const@@GLIBCXX_3.4
+      1    0.1%    0.1%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::os::GetCPUInfo(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::crypto::SecureContext::SetCiphers(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::crypto::NodeBIO::Read(char*, unsigned long)
+      1    0.1%    0.1%  node::crypto::Hmac::HmacDigest(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::crypto::GetRootCertificates(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::cares_wrap::(anonymous namespace)::GetAddrInfo(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::TCPWrap::SetKeepAlive(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::TCPWrap::Connect(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::Environment::GetFromCallbackData(v8::Local<v8::Value>)
+      1    0.1%    0.1%  _init
+      1    0.1%    0.1%  __pthread_mutex_unlock@GLIBC_2.2.5
+      1    0.1%    0.1%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    0.1%    0.1%  __open64_nocancel@@GLIBC_PRIVATE
+      1    0.1%    0.1%  __mmap@@GLIBC_PRIVATE
+      1    0.1%    0.1%  __madvise@@GLIBC_PRIVATE
+      1    0.1%    0.1%  _IO_file_xsputn@@GLIBC_2.2.5
+      1    0.1%    0.1%  _IO_default_xsputn@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+     17    0.9%    1.6%  JavaScript
+   1069   58.0%   98.4%  C++
+    200   10.8%   18.4%  GC
+    758   41.1%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    790   65.8%   42.8%  v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+    246   20.5%   13.3%  node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+     39    3.3%    2.1%  __write@@GLIBC_2.2.5
+     14    1.2%    0.8%  v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+     10    0.8%    0.5%  syscall@@GLIBC_2.2.5
+     10    0.8%    0.5%  node::loader::ModuleWrap::Link(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.8%    0.5%  fwrite@@GLIBC_2.2.5
+      7    0.6%    0.4%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.5%    0.3%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      6    0.5%    0.3%  __mprotect@@GLIBC_PRIVATE
+      6    0.5%    0.3%  __libc_malloc@@GLIBC_2.2.5
+      4    0.3%    0.2%  v8::internal::Builtin_ObjectDefineProperty(int, unsigned long*, v8::internal::Isolate*)
+      4    0.3%    0.2%  operator new(unsigned long)@@GLIBCXX_3.4
+      3    0.3%    0.2%  v8::internal::Builtin_FunctionConstructor(int, unsigned long*, v8::internal::Isolate*)
+      3    0.3%    0.2%  v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      3    0.3%    0.2%  cfree@GLIBC_2.2.5
+      2    0.2%    0.1%  v8::internal::VariableMap::Declare(v8::internal::Zone*, v8::internal::Scope*, v8::internal::AstRawString const*, v8::internal::VariableMode, v8::internal::VariableKind, v8::internal::InitializationFlag, v8::internal::MaybeAssignedFlag, bool*)
+      2    0.2%    0.1%  v8::internal::Builtin_StringPrototypeLastIndexOf(int, unsigned long*, v8::internal::Isolate*)
+      2    0.2%    0.1%  v8::internal::Builtin_ErrorCaptureStackTrace(int, unsigned long*, v8::internal::Isolate*)
+      2    0.2%    0.1%  v8::internal::Accessors::FunctionPrototypeSetter(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Boolean> const&)
+      2    0.2%    0.1%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  v8::internal::VariableProxy::BindTo(v8::internal::Variable*)
+      1    0.1%    0.1%  v8::internal::UnoptimizedCompilationJob::RecordCompilationStats(v8::internal::Isolate*) const
+      1    0.1%    0.1%  v8::internal::Scope::Scope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType)
+      1    0.1%    0.1%  v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      1    0.1%    0.1%  v8::internal::Scope::DeserializeScopeChain(v8::internal::Isolate*, v8::internal::Zone*, v8::internal::ScopeInfo, v8::internal::DeclarationScope*, v8::internal::AstValueFactory*, v8::internal::Scope::DeserializationMode)
+      1    0.1%    0.1%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+      1    0.1%    0.1%  v8::internal::Expression::IsConciseMethodDefinition() const
+      1    0.1%    0.1%  v8::internal::DeclarationScope::DeclarationScope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType, v8::internal::FunctionKind)
+      1    0.1%    0.1%  v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Compiler::ClearExceptionFlag, v8::internal::IsCompiledScope*)
+      1    0.1%    0.1%  v8::internal::Builtin_GlobalEval(int, unsigned long*, v8::internal::Isolate*)
+      1    0.1%    0.1%  v8::internal::Builtin_ErrorConstructor(int, unsigned long*, v8::internal::Isolate*)
+      1    0.1%    0.1%  v8::internal::Builtin_CallSitePrototypeToString(int, unsigned long*, v8::internal::Isolate*)
+      1    0.1%    0.1%  v8::internal::Builtin_ArrayShift(int, unsigned long*, v8::internal::Isolate*)
+      1    0.1%    0.1%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+      1    0.1%    0.1%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    0.1%    0.1%  v8::internal::AstRawString::Compare(void*, void*)
+      1    0.1%    0.1%  v8::internal::AssemblerBase::~AssemblerBase()
+      1    0.1%    0.1%  v8::internal::Accessors::ErrorStackGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.1%    0.1%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      1    0.1%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.1%    0.1%  std::locale::id::_M_id() const@@GLIBCXX_3.4
+      1    0.1%    0.1%  node::inspector::(anonymous namespace)::WaitForDebugger(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::TLSWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  node::Environment::GetFromCallbackData(v8::Local<v8::Value>)
+      1    0.1%    0.1%  _init
+      1    0.1%    0.1%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    0.1%    0.1%  _IO_file_xsputn@@GLIBC_2.2.5
+      1    0.1%    0.1%  _IO_default_xsputn@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    601   32.6%  /home/matias/.nvm/versions/node/v12.22.12/bin/node
+    263   43.8%    /home/matias/.nvm/versions/node/v12.22.12/bin/node
+     43   16.3%      /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      4    9.3%        LazyCompile: ~splitHost tls.js:148:19
+      3   75.0%          LazyCompile: ~checkServerIdentity tls.js:258:59
+      3  100.0%            LazyCompile: ~onConnectSecure _tls_wrap.js:1488:25
+      1   25.0%          LazyCompile: ~check tls.js:155:15
+      1  100.0%            LazyCompile: ~wildcard tls.js:312:22
+      3    7.0%        LazyCompile: ~isBad tls.js:173:17
+      3  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      3  100.0%            LazyCompile: ~check tls.js:155:15
+      2    4.7%        LazyCompile: ~unfqdn tls.js:144:16
+      1   50.0%          LazyCompile: ~splitHost tls.js:148:19
+      1  100.0%            LazyCompile: ~check tls.js:155:15
+      1   50.0%          LazyCompile: ~checkServerIdentity tls.js:258:59
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      2    4.7%        LazyCompile: ~_command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      2  100.0%          LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      2  100.0%            LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:170:10
+      2    4.7%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/log4js/node_modules/debug/src/node.js:124:55
+      2  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      2  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/log4js/node_modules/debug/src/node.js:1:1
+      1    2.3%        LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:899:18
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1    2.3%        LazyCompile: ~updateRsFromPrimary /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology_description.js:339:29
+      1  100.0%          LazyCompile: ~update /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology_description.js:141:9
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:515:22
+      1    2.3%        LazyCompile: ~updateRsFromPrimary /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology_description.js:339:29
+      1  100.0%          LazyCompile: ~update /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology_description.js:141:9
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:512:22
+      1    2.3%        LazyCompile: ~translatePeerCertificate _tls_common.js:312:69
+      1  100.0%          LazyCompile: ~TLSSocket.getPeerCertificate _tls_wrap.js:977:50
+      1  100.0%            LazyCompile: ~onConnectSecure _tls_wrap.js:1488:25
+      1    2.3%        LazyCompile: ~stat internal/modules/cjs/loader.js:123:14
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      1    2.3%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:231:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      1    2.3%        LazyCompile: ~populateMaps /home/matias/Escritorio/coderHouse/clase32/node_modules/mime-types/index.js:154:23
+      1  100.0%          Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mime-types/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1    2.3%        LazyCompile: ~pathtoRegexp /home/matias/Escritorio/coderHouse/clase32/node_modules/path-to-regexp/index.js:28:22
+      1  100.0%          LazyCompile: ~Layer /home/matias/Escritorio/coderHouse/clase32/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%            LazyCompile: ~use /home/matias/Escritorio/coderHouse/clase32/node_modules/express/lib/router/index.js:428:25
+      1    2.3%        LazyCompile: ~module.exports /home/matias/Escritorio/coderHouse/clase32/node_modules/set-blocking/index.js:1:27
+      1  100.0%          Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/npmlog/log.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1    2.3%        LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1    2.3%        LazyCompile: ~matchesParentDomain /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/uri_parser.js:28:29
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/uri_parser.js:67:52
+      1  100.0%            LazyCompile: ~onresolve dns.js:198:19
+      1    2.3%        LazyCompile: ~makeConnection /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connect.js:269:24
+      1  100.0%          LazyCompile: ~connect /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connect.js:18:17
+      1  100.0%            LazyCompile: ~checkServer /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/monitor.js:183:21
+      1    2.3%        LazyCompile: ~findLongestRegisteredExtension internal/modules/cjs/loader.js:355:40
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      1    2.3%        LazyCompile: ~enable /home/matias/Escritorio/coderHouse/clase32/node_modules/mquery/node_modules/debug/src/debug.js:152:16
+      1  100.0%          Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mquery/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1    2.3%        LazyCompile: ~deprecate internal/util.js:65:19
+      1  100.0%          Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%        LazyCompile: ~createConnection /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection_pool.js:383:26
+      1  100.0%          LazyCompile: ~processWaitQueue /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection_pool.js:445:26
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection_pool.js:236:22
+      1    2.3%        LazyCompile: ~ServerOpeningEvent /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/events.js:24:14
+      1  100.0%          LazyCompile: ~createAndConnectServer /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:860:32
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:893:50
+      1    2.3%        LazyCompile: ~ServerDescription /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/server_description.js:59:14
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/server.js:150:51
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      1    2.3%        LazyCompile: ~Monitor /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/monitor.js:45:14
+      1  100.0%          LazyCompile: ~Server /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/server.js:83:14
+      1  100.0%            LazyCompile: ~createAndConnectServer /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:860:32
+      1    2.3%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      1  100.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1    2.3%        LazyCompile: ~<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%          LazyCompile: ~resolvePackageTargetString internal/modules/esm/resolve.js:326:36
+      1  100.0%            LazyCompile: ~resolvePackageTarget internal/modules/esm/resolve.js:380:30
+      1    2.3%        LazyCompile: ~<anonymous> _tls_common.js:209:39
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            LazyCompile: ~createSecureContext _tls_common.js:95:59
+      1    2.3%        LazyCompile: ~<anonymous> _tls_common.js:207:37
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            LazyCompile: ~createSecureContext _tls_common.js:95:59
+      1    2.3%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/streamroller/node_modules/debug/src/node.js:124:55
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/streamroller/node_modules/debug/src/node.js:1:1
+      1    2.3%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/nopt/lib/nopt.js:58:38
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            LazyCompile: ~clean /home/matias/Escritorio/coderHouse/clase32/node_modules/nopt/lib/nopt.js:53:16
+      1    2.3%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mquery/node_modules/debug/src/node.js:49:64
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mquery/node_modules/debug/src/node.js:1:1
+      1    2.3%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose-legacy-pluralize/index.js:87:34
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            LazyCompile: ~pluralize /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose-legacy-pluralize/index.js:83:19
+      1    2.3%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:87:41
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:159:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:70:33
+      1    2.3%        LazyCompile: *realpathSync fs.js:1568:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1    2.3%        LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      1  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      8    3.0%      LazyCompile: ~deserializeObject /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      7   87.5%        LazyCompile: ~deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      7  100.0%          LazyCompile: ~BSON.deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:134:38
+      4   57.1%            LazyCompile: ~parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/msg.js:172:8
+      2   28.6%            LazyCompile: ~Response.parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/commands.js:438:36
+      1   14.3%            LazyCompile: ~Response.parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/commands.js:444:36
+      1   12.5%        LazyCompile: ~deserializeObject /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      1  100.0%          LazyCompile: ~deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      1  100.0%            LazyCompile: ~BSON.deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:134:38
+      7    2.7%      LazyCompile: *realpathSync fs.js:1568:22
+      7  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      7  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      5   71.4%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:342:23
+      2   28.6%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:279:20
+      5    1.9%      LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:220:33
+      5  100.0%        LazyCompile: ~emit events.js:262:44
+      5  100.0%          LazyCompile: ~processIncomingData /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      5  100.0%            LazyCompile: ~_write /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      5    1.9%      LazyCompile: *readPackageScope internal/modules/cjs/loader.js:262:26
+      4   80.0%        LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      4  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      4  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      1   20.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      4    1.5%      LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      3   75.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      3  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      3  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      1   25.0%        LazyCompile: ~module.exports /home/matias/Escritorio/coderHouse/clase32/node_modules/resolve-from/index.js:5:27
+      1  100.0%          LazyCompile: ~require_optional /home/matias/Escritorio/coderHouse/clase32/node_modules/require_optional/index.js:65:32
+      1  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/index.js:1:1
+      4    1.5%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      4  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      4  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      2   50.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connection.js:1:1
+      1   25.0%            LazyCompile: ~retrieveBSON /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/utils.js:17:22
+      1   25.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/qs/lib/index.js:1:1
+      3    1.1%      LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      3  100.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      2   66.7%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:342:23
+      2  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      1   33.3%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:279:20
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      3    1.1%      LazyCompile: ~serializeInto /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/serializer.js:674:43
+      2   66.7%        LazyCompile: ~serializeObject /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/serializer.js:320:31
+      2  100.0%          LazyCompile: ~serializeInto /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/serializer.js:674:43
+      2  100.0%            LazyCompile: ~serialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:47:46
+      1   33.3%        LazyCompile: ~serialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:47:46
+      1  100.0%          LazyCompile: ~serializeBson /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/msg.js:126:16
+      1  100.0%            LazyCompile: ~makeDocumentSegment /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/msg.js:115:22
+      3    1.1%      LazyCompile: ~module.exports /home/matias/Escritorio/coderHouse/clase32/node_modules/bluebird/js/release/promise.js:2:26
+      3  100.0%        Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/bluebird/js/release/bluebird.js:1:1
+      3  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      3  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      3    1.1%      LazyCompile: ~Pager /home/matias/Escritorio/coderHouse/clase32/node_modules/memory-pager/index.js:3:16
+      3  100.0%        LazyCompile: ~Pager /home/matias/Escritorio/coderHouse/clase32/node_modules/memory-pager/index.js:3:16
+      3  100.0%          LazyCompile: ~Bitfield /home/matias/Escritorio/coderHouse/clase32/node_modules/sparse-bitfield/index.js:5:19
+      3  100.0%            LazyCompile: ~Bitfield /home/matias/Escritorio/coderHouse/clase32/node_modules/sparse-bitfield/index.js:5:19
+      3    1.1%      LazyCompile: *normalizeString path.js:52:25
+      1   33.3%        LazyCompile: ~resolve path.js:973:10
+      1  100.0%          LazyCompile: ~readPackage internal/modules/cjs/loader.js:231:21
+      1  100.0%            LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      1   33.3%        LazyCompile: *realpathSync fs.js:1568:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1   33.3%        LazyCompile: *readPackageScope internal/modules/cjs/loader.js:262:26
+      1  100.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+     14    2.3%    LazyCompile: ~deserializeObject /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      8   57.1%      LazyCompile: ~deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      8  100.0%        LazyCompile: ~BSON.deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:134:38
+      5   62.5%          LazyCompile: ~parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/msg.js:172:8
+      5  100.0%            LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:220:33
+      2   25.0%          LazyCompile: ~parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/msg.js:178:8
+      2  100.0%            LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:251:33
+      1   12.5%          LazyCompile: ~Response.parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/commands.js:438:36
+      1  100.0%            LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:220:33
+      6   42.9%      LazyCompile: ~deserializeObject /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      5   83.3%        LazyCompile: ~deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      5  100.0%          LazyCompile: ~BSON.deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:134:38
+      2   40.0%            LazyCompile: ~parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/msg.js:178:8
+      2   40.0%            LazyCompile: ~Response.parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/commands.js:438:36
+      1   20.0%            LazyCompile: ~Response.parse /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/commands.js:444:36
+      1   16.7%        LazyCompile: ~deserializeObject /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      1  100.0%          LazyCompile: ~deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      1  100.0%            LazyCompile: ~BSON.deserialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:134:38
+     12    2.0%    v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+     10   83.3%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:231:21
+      7   70.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:414:24
+      7  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      7  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      3   30.0%        LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      3  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      3  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      2   16.7%      LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1032:39
+      2  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      2  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      2  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      7    1.2%    LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:436:28
+      7  100.0%      LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      6   85.7%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      6  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      6  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      1   14.3%        LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      1  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      7    1.2%    LazyCompile: *readPackageScope internal/modules/cjs/loader.js:262:26
+      6   85.7%      LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      6  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      3   50.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      3  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      3   50.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      3  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      1   14.3%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+
+    319   17.3%  node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    319  100.0%    v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+    319  100.0%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:899:18
+    319  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+    319  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+    260   81.5%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+     59   18.5%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+
+    315   17.1%  node::inspector::(anonymous namespace)::WaitForDebugger(v8::FunctionCallbackInfo<v8::Value> const&)
+    314   99.7%    v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+    314  100.0%      LazyCompile: ~inspectorWaitForDebugger inspector.js:144:34
+    314  100.0%        LazyCompile: ~<anonymous> /snap/code/113/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:91065
+    314  100.0%          LazyCompile: ~<anonymous> /snap/code/113/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:90356
+    314  100.0%            LazyCompile: ~7207 /snap/code/113/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:89296
+
+    155    8.4%  /usr/lib/x86_64-linux-gnu/libc.so.6
+     26   16.8%    /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      5   19.2%      /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      2   40.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:231:21
+      2  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:262:26
+      2  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      1   20.0%        LazyCompile: ~_command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      1  100.0%          LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      1  100.0%            LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:170:10
+      1   20.0%        LazyCompile: ~Kareem.filter /home/matias/Escritorio/coderHouse/clase32/node_modules/kareem/index.js:324:35
+      1  100.0%          LazyCompile: ~applyHooks /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/helpers/model/applyHooks.js:32:20
+      1  100.0%            LazyCompile: ~compile /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/model.js:4885:33
+      1   20.0%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/streamroller/node_modules/debug/src/node.js:124:55
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/streamroller/node_modules/debug/src/node.js:1:1
+      2    7.7%      LazyCompile: *readPackageScope internal/modules/cjs/loader.js:262:26
+      1   50.0%        LazyCompile: ~trySelf internal/modules/cjs/loader.js:383:17
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      1  100.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1   50.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      1    3.8%      LazyCompile: ~wrapfunction /home/matias/Escritorio/coderHouse/clase32/node_modules/depd/index.js:397:23
+      1  100.0%        Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/express/lib/request.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1    3.8%      LazyCompile: ~streamIdentifier /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:288:26
+      1  100.0%        LazyCompile: ~Connection /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:29:14
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:30:54
+      1  100.0%            LazyCompile: ~callback /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:275:28
+      1    3.8%      LazyCompile: ~serializeInto /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/parser/serializer.js:674:43
+      1  100.0%        LazyCompile: ~serialize /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/bson.js:47:46
+      1  100.0%          LazyCompile: ~Query.toBin /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/commands.js:90:33
+      1  100.0%            LazyCompile: ~writeCommand /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/message_stream.js:51:15
+      1    3.8%      LazyCompile: ~notEnumerableProp /home/matias/Escritorio/coderHouse/clase32/node_modules/bluebird/js/release/util.js:89:27
+      1  100.0%        LazyCompile: ~module.exports /home/matias/Escritorio/coderHouse/clase32/node_modules/bluebird/js/release/promise.js:2:26
+      1  100.0%          Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/bluebird/js/release/bluebird.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1    3.8%      LazyCompile: ~nextPart fs.js:1564:31
+      1  100.0%        LazyCompile: ~realpathSync fs.js:1568:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1    3.8%      LazyCompile: ~hrtime internal/process/per_thread.js:119:18
+      1  100.0%        LazyCompile: ~calculateDurationInMs /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/utils.js:708:31
+      1  100.0%          LazyCompile: ~measureAndReschedule /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/monitor.js:364:32
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/monitor.js:395:65
+      1    3.8%      LazyCompile: ~exports.find /home/matias/Escritorio/coderHouse/clase32/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%        Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/bcrypt/bcrypt.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1    3.8%      LazyCompile: ~createTopology /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/operations/connect.js:487:24
+      1  100.0%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/operations/connect.js:282:25
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/uri_parser.js:120:51
+      1  100.0%            LazyCompile: ~parseConnectionString /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/uri_parser.js:560:31
+      1    3.8%      LazyCompile: ~continueScramConversation /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/auth/scram.js:117:35
+      1  100.0%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/auth/scram.js:107:50
+      1  100.0%          LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:251:33
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      1    3.8%      LazyCompile: ~afterWrite _stream_writable.js:480:20
+      1  100.0%        LazyCompile: ~onwrite _stream_writable.js:431:17
+      1  100.0%          LazyCompile: ~onWriteComplete internal/stream_base_commons.js:82:25
+      1    3.8%      LazyCompile: ~_command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      1  100.0%        LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      1  100.0%          LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:183:10
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connect.js:87:41
+      1    3.8%      LazyCompile: ~TLSSocket.getPeerCertificate _tls_wrap.js:977:50
+      1  100.0%        LazyCompile: ~onConnectSecure _tls_wrap.js:1488:25
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~TLSSocket._finishInit _tls_wrap.js:911:43
+      1    3.8%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      1  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:73:31
+      1  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/operations/find.js:1:1
+      1    3.8%      LazyCompile: ~<anonymous> internal/fs/utils.js:283:35
+      1  100.0%        LazyCompile: ~hidden internal/errors.js:282:25
+      1  100.0%          LazyCompile: ~<anonymous> internal/fs/utils.js:579:38
+      1  100.0%            LazyCompile: ~hidden internal/errors.js:282:25
+      1    3.8%      LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/auth/scram.js:31:28
+      1  100.0%        LazyCompile: ~wrap.ondone internal/crypto/random.js:62:17
+      1    3.8%      LazyCompile: *resolve path.js:973:10
+      1  100.0%        LazyCompile: ~realpathSync fs.js:1568:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1    3.8%      LazyCompile: *realpathSync fs.js:1568:22
+      1  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:335:20
+      1  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:326:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:342:23
+      1    3.8%      LazyCompile: *Module._findPath internal/modules/cjs/loader.js:436:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:731:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:879:36
+      1    3.8%      Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/handlebars/dist/cjs/handlebars/internal/proto-access.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+
+    106    5.7%  epoll_pwait@@GLIBC_2.6
+
+     67    3.6%  __write@@GLIBC_2.2.5
+     39   58.2%    /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      5   12.8%      /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      2   40.0%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/debug/src/node.js:34:64
+      2  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      2  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/debug/src/node.js:1:1
+      1   20.0%        LazyCompile: ~performInitialHandshake /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connect.js:70:33
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connect.js:30:54
+      1  100.0%            LazyCompile: ~callback /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connect.js:295:28
+      1   20.0%        LazyCompile: ~isBad tls.js:173:17
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            LazyCompile: ~check tls.js:155:15
+      1   20.0%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/connect-mongo/node_modules/debug/src/node.js:124:55
+      1  100.0%          /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%            Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/connect-mongo/node_modules/debug/src/node.js:1:1
+      2    5.1%      LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection_pool.js:345:21
+      2  100.0%        LazyCompile: ~handleOperationResult /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/server.js:520:40
+      2  100.0%          LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:220:33
+      2  100.0%            LazyCompile: ~emit events.js:262:44
+      1    2.6%      LazyCompile: ~set internal/url.js:621:8
+      1  100.0%        /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%          LazyCompile: ~pathToFileURL internal/url.js:1390:23
+      1  100.0%            LazyCompile: ~<anonymous> internal/modules/run_main.js:43:21
+      1    2.6%      LazyCompile: ~resolveClusterTime /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/topologies/shared.js:332:28
+      1  100.0%        LazyCompile: ~serverUpdateHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:515:22
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/server.js:153:51
+      1    2.6%      LazyCompile: ~processWaitQueue /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:1009:26
+      1  100.0%        LazyCompile: ~serverUpdateHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:512:22
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/server.js:150:51
+      1    2.6%      LazyCompile: ~processIncomingData /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1  100.0%        LazyCompile: ~_write /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1  100.0%          LazyCompile: ~doWrite _stream_writable.js:393:17
+      1  100.0%            LazyCompile: ~writeOrBuffer _stream_writable.js:355:23
+      1    2.6%      LazyCompile: ~onceWrapper events.js:415:21
+      1  100.0%        LazyCompile: ~emit events.js:262:44
+      1  100.0%          LazyCompile: ~onConnectSecure _tls_wrap.js:1488:25
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      1    2.6%      LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%        LazyCompile: ~emit events.js:262:44
+      1  100.0%          LazyCompile: ~processIncomingData /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1  100.0%            LazyCompile: ~_write /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1    2.6%      LazyCompile: ~isStaleServerDescription /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:788:34
+      1  100.0%        LazyCompile: ~serverUpdateHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:512:22
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/server.js:150:51
+      1    2.6%      LazyCompile: ~isClientEncryptionEnabled /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/wireprotocol/command.js:14:35
+      1  100.0%        LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      1  100.0%          LazyCompile: ~command /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection.js:170:10
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:87:41
+      1    2.6%      LazyCompile: ~get isReadable /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/server_description.js:101:17
+      1  100.0%        LazyCompile: ~TopologyDescription /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology_description.js:24:14
+      1  100.0%          LazyCompile: ~Topology /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:103:14
+      1  100.0%            LazyCompile: ~NativeTopology /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/topologies/native_topology.js:9:14
+      1    2.6%      LazyCompile: ~formatRaw internal/util/inspect.js:794:19
+      1  100.0%        LazyCompile: ~formatValue internal/util/inspect.js:725:21
+      1  100.0%          LazyCompile: ~formatProperty internal/util/inspect.js:1674:24
+      1  100.0%            LazyCompile: ~formatRaw internal/util/inspect.js:794:19
+      1    2.6%      LazyCompile: ~executeCommand /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/operations/command_v2.js:43:17
+      1  100.0%        LazyCompile: ~execute /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/operations/create_indexes.js:79:10
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/operations/execute_operation.js:131:49
+      1  100.0%            LazyCompile: ~processWaitQueue /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:1009:26
+      1    2.6%      LazyCompile: ~enable /home/matias/Escritorio/coderHouse/clase32/node_modules/debug/src/debug.js:138:16
+      1  100.0%        Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1    2.6%      LazyCompile: ~emit events.js:262:44
+      1  100.0%        LazyCompile: ~_addListener events.js:342:22
+      1  100.0%          LazyCompile: ~addListener events.js:404:58
+      1  100.0%            LazyCompile: ~_setClient /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/connection.js:882:20
+      1    2.6%      LazyCompile: ~connectHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:314:26
+      1  100.0%        LazyCompile: ~onceWrapper events.js:415:21
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~onConnectSecure _tls_wrap.js:1488:25
+      1    2.6%      LazyCompile: ~callback /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:97:20
+      1  100.0%        LazyCompile: ~NativeCollection.onOpen /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:47:45
+      1  100.0%          LazyCompile: ~Connection.onOpen /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/connection.js:630:39
+      1  100.0%            LazyCompile: ~_setClient /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/connection.js:882:20
+      1    2.6%      LazyCompile: ~append /home/matias/Escritorio/coderHouse/clase32/node_modules/bl/bl.js:61:47
+      1  100.0%        LazyCompile: ~_write /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1  100.0%          LazyCompile: ~doWrite _stream_writable.js:393:17
+      1  100.0%            LazyCompile: ~writeOrBuffer _stream_writable.js:355:23
+      1    2.6%      LazyCompile: ~add /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/schema.js:458:36
+      1  100.0%        LazyCompile: ~Schema /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/schema.js:94:16
+      1  100.0%          LazyCompile: ~Schema /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/lib/schema.js:94:16
+      1  100.0%            Script: ~<anonymous> file:///home/matias/Escritorio/coderHouse/clase32/models/user.js:1:1
+      1    2.6%      LazyCompile: ~Timestamp.greaterThan /home/matias/Escritorio/coderHouse/clase32/node_modules/bson/lib/bson/timestamp.js:279:43
+      1  100.0%        LazyCompile: ~resolveClusterTime /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/topologies/shared.js:329:28
+      1  100.0%          LazyCompile: ~serverUpdateHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:512:22
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      1    2.6%      LazyCompile: ~Collection.createIndex /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/collection.js:1243:44
+      1  100.0%        LazyCompile: ~setAutoRemove /home/matias/Escritorio/coderHouse/clase32/node_modules/connect-mongo/build/main/lib/MongoStore.js:138:18
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/connect-mongo/build/main/lib/MongoStore.js:127:19
+      1  100.0%            node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    2.6%      LazyCompile: ~Authenticator.init /home/matias/Escritorio/coderHouse/clase32/node_modules/passport/lib/authenticator.js:29:40
+      1  100.0%        LazyCompile: ~Authenticator /home/matias/Escritorio/coderHouse/clase32/node_modules/passport/lib/authenticator.js:13:23
+      1  100.0%          Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/passport/lib/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1    2.6%      LazyCompile: ~<anonymous> internal/bootstrap/loaders.js:165:38
+      1  100.0%        /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1  100.0%          Eval: ~<static_fields_initializer> internal/bootstrap/loaders.js:165:3
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/loaders.js:1:1
+      1    2.6%      LazyCompile: ~<anonymous> /snap/code/113/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:90766
+      1  100.0%        LazyCompile: ~<anonymous> /snap/code/113/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:90356
+      1  100.0%          LazyCompile: ~7207 /snap/code/113/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:89296
+      1  100.0%            LazyCompile: ~__webpack_require__ /snap/code/113/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/bootloader.bundle.js:2:99427
+      1    2.6%      LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/operations/connect.js:283:25
+      1  100.0%        LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/uri_parser.js:127:51
+      1  100.0%          LazyCompile: ~parseConnectionString /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/uri_parser.js:572:31
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/uri_parser.js:95:35
+      1    2.6%      LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/connection/connect.js:101:64
+      1  100.0%        LazyCompile: ~messageHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:251:33
+      1  100.0%          LazyCompile: ~emit events.js:262:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1    2.6%      LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:667:78
+      1  100.0%        LazyCompile: ~processWaitQueue /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:1009:26
+      1  100.0%          LazyCompile: ~serverUpdateHandler /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/sdam/topology.js:512:22
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      1    2.6%      LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/cmap/connection_pool.js:393:53
+      1  100.0%        LazyCompile: ~callback /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:71:28
+      1  100.0%          LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/connect.js:146:40
+      1  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/auth/scram.js:183:53
+      1    2.6%      Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/once/once.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      1    2.6%      Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mquery/lib/collection/node.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      1    2.6%      Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      1    2.6%      Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/connection/commands.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      1    2.6%      Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/iconv-lite/lib/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+      1    2.6%      Eval: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/express-session/node_modules/safe-buffer/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:953:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1008:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:851:33
+
+     48    2.6%  node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     48  100.0%    v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+     48  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+     44   91.7%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:297:29
+      7   15.9%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      3    6.8%          Eval: ~<anonymous> stream.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      3    6.8%          Eval: ~<anonymous> https.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      2    4.5%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:252:32
+      2  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    4.5%          Eval: ~<anonymous> internal/url.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      2    4.5%          Eval: ~<anonymous> internal/process/esm_loader.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      2    4.5%          Eval: ~<anonymous> internal/child_process.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      2    4.5%          Eval: ~<anonymous> events.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          LazyCompile: ~setupProcessObject internal/bootstrap/node.js:271:28
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.3%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:330:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.3%          LazyCompile: ~readFile fs.js:298:18
+      1  100.0%            LazyCompile: ~<anonymous> internal/util.js:296:24
+      1    2.3%          LazyCompile: ~initializeReport internal/bootstrap/pre_execution.js:170:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:17:36
+      1    2.3%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:404:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:17:36
+      1    2.3%          LazyCompile: ~initCJSParse internal/modules/esm/translators.js:61:28
+      1  100.0%            LazyCompile: ~commonjsStrategy internal/modules/esm/translators.js:174:60
+      1    2.3%          LazyCompile: ~get fs.js:2070:8
+      1  100.0%            /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1    2.3%          LazyCompile: ~get dns.js:324:8
+      1  100.0%            /home/matias/.nvm/versions/node/v12.22.12/bin/node
+      1    2.3%          Eval: ~<anonymous> worker_threads.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> tls.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> internal/modules/cjs/helpers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> internal/crypto/keygen.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> fs.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> crypto.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> cluster.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> _tls_wrap.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      1    2.3%          Eval: ~<anonymous> _http_common.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:264:27
+      4    8.3%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:213:25
+      4  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:22:26
+      4  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:648:24
+
+     24    1.3%  node::crypto::PBKDF2(v8::FunctionCallbackInfo<v8::Value> const&)
+     24  100.0%    v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+     24  100.0%      LazyCompile: ~pbkdf2Sync internal/crypto/pbkdf2.js:45:20
+     16   66.7%        LazyCompile: ~HI /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/auth/scram.js:286:12
+     16  100.0%          LazyCompile: ~continueScramConversation /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/auth/scram.js:117:35
+     16  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongoose/node_modules/mongodb/lib/core/auth/scram.js:107:50
+      8   33.3%        LazyCompile: ~HI /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/auth/scram.js:285:12
+      8  100.0%          LazyCompile: ~continueScramConversation /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/auth/scram.js:116:35
+      8  100.0%            LazyCompile: ~<anonymous> /home/matias/Escritorio/coderHouse/clase32/node_modules/mongodb/lib/core/auth/scram.js:106:50
+

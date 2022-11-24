@@ -1,0 +1,5 @@
+Comando de ejecución: 
+
+node --prof server.js -p 8080
+node --prof-process isolate-artillery.log > result-isolate.txt
+artillery quick --count 20 -n 50 http://localhost:8080/info > prueba_artilleria.txt

@@ -1,0 +1,28 @@
+[2022-11-10T10:42:52.412] [INFO] todos - metodo GET Ruta  /
+[2022-11-10T10:47:13.376] [INFO] todos - metodo GET Ruta  /
+[2022-11-10T10:47:45.227] [ERROR] archivo2 - metodo GET Ruta  /failregister
+[2022-11-10T10:49:07.032] [INFO] todos - metodo GET Ruta  /
+[2022-11-10T10:49:19.029] [INFO] todos - metodo GET Ruta  /
+[2022-11-10T11:10:32.288] [INFO] todos - metodo GET Ruta  /
+[2022-11-10T11:10:45.753] [INFO] todos - metodo GET Ruta  /
+[2022-11-11T15:02:48.038] [INFO] todos - metodo GET Ruta  /
+[2022-11-11T15:02:48.221] [WARN] todos - metodo GET Ruta inexistente /favicon.ico
+[2022-11-11T15:16:09.472] [INFO] todos - metodo GET Ruta  /
+[2022-11-11T15:16:56.779] [INFO] todos - metodo GET Ruta  /
+[2022-11-11T15:21:02.130] [INFO] todos - metodo GET Ruta  /
+[2022-11-16T11:58:20.909] [INFO] todos - metodo GET Ruta  /
+[2022-11-16T11:58:21.142] [WARN] todos - metodo GET Ruta inexistente /favicon.ico
+[2022-11-16T16:30:08.061] [WARN] todos - metodo GET Ruta inexistente /favicon.ico
+[2022-11-22T12:40:22.155] [INFO] todos - metodo GET Ruta  /
+[2022-11-22T12:40:22.591] [WARN] todos - metodo GET Ruta inexistente /favicon.ico
+[2022-11-24T19:25:46.814] [INFO] todos - metodo GET Ruta  /
+[2022-11-24T19:25:46.968] [WARN] todos - metodo GET Ruta inexistente /favicon.ico
+[2022-11-24T19:28:42.143] [INFO] todos - metodo GET Ruta  /
+[2022-11-24T19:28:49.160] [INFO] todos - metodo GET Ruta  /
+[2022-11-24T19:28:54.198] [ERROR] archivo2 - metodo GET Ruta  /failregister
+[2022-11-24T19:28:57.382] [INFO] todos - metodo GET Ruta  /
+[2022-11-24T19:29:03.825] [ERROR] archivo2 - metodo GET Ruta  /failregister
+[2022-11-24T19:29:08.911] [INFO] todos - metodo GET Ruta  /
+[2022-11-24T19:29:18.656] [INFO] todos - metodo GET Ruta  /
+[2022-11-24T19:29:24.549] [INFO] todos - metodo GET Ruta  /
+[2022-11-24T19:34:10.406] [INFO] todos - metodo GET Ruta  /
